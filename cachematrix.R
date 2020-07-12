@@ -44,9 +44,7 @@ cacheSolve <- function(x, ...) {
       invMatrix <- x$getInverse()
       oldMatrix <- x$getOldMatrix()
       Matrix <- x$getMatrix()
-      print(oldMatrix)
-      print(Matrix)
-      
+
       if(!is.null(invMatrix) & !is.null(oldMatrix) & identical(Matrix, oldMatrix)) {
           message("getting cached inverse matrix")
           return(invMatrix)
